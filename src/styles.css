@@ -1,8 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 :root{
-    --font-color: #191919;
+    --text-color-light: #191919;
+    --text-color-dark: #fffddd;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     min-height: 100vh;
     display:flex;
     justify-content: center;
+    color: var(--text-color-light)
+}
+.dark-theme{
+    background-color: #191919;
+    color:var(--text-color-dark);
+}
+body{
+    transition: background-color 0.3s, color 0.3s ease;
 }

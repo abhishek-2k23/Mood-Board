@@ -7,6 +7,7 @@
    
        </div>
        <div>
+        <fa-icon (click) = "toggleTheme()" style="cursor: pointer;" [icon]="isDarkMode? faMoon : faSun" ></fa-icon>
         <a routerLink="/login">Login</a>
         <a routerLink="/register">Register</a>
        </div>
