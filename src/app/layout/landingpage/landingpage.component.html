@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="heading">
+        <h1>Welcome to Mood Board </h1>
+        <h2>— Your Emotional Diary</h2>
+        <p> Save a snapshot of your feelings every day. Simple, fast, and private. </p>        
+    </div>
+    <div class="description">
+        <p>Your emotions matter, and so does tracking them.
+            This mood board helps you log your daily feelings in a simple and meaningful way.
+            Reflect, learn, and grow into the best version of yourself — one day at a time.</p>
+    </div>
+    <div class="chips" >
+        <div class="chip" *ngFor="let feature of features">
+            <fa-icon [icon]="feature.icon"></fa-icon> <p>{{feature.name}}</p>
+        </div>
+    </div>
+<button [routerLink] = "['login']">
+        Start to tract your mood <span style="margin-left: 10px; cursor: pointer;"><fa-icon [icon]="faArrowRight"></fa-icon></span>
+    </button>
+
+    
+</div>

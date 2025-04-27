@@ -1,0 +1,58 @@
+.container{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    button{
+        cursor: pointer;
+    }
+}
+.heading{
+    text-align: center;
+    margin: 0;
+    h1{
+        font-size: 55px;
+        margin-bottom: 0;
+    }
+    h2{
+        font-size: 35px;
+        margin-top: 0;
+    }
+    p{
+        margin-top: 5px;
+        font-size: 16px;
+    }
+}
+.description{
+    width: 700px;
+    text-align: center;
+}
+button{
+    width: 650px;
+    padding: 25px 0;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.chips{
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 12px 0 24px 0;
+}
+.chip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    border: 1px solid grey;
+    text-align: center;
+    border-radius: 12px;
+    padding: 0 8px;
+    p{
+        margin: 10px;
+    }
+}
