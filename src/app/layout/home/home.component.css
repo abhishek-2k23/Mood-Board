@@ -1,0 +1,13 @@
+.mood-buttons{
+    display: flex;
+    gap: 10px;
+}
+.mood-button{
+    padding: 0 25px;
+    height: 30px;
+    border: 2px solid rgb(105, 106, 107);
+    border-radius: 10px;
+    text-align: center;
+    color: var(--font-color);
+    cursor: pointer;
+}

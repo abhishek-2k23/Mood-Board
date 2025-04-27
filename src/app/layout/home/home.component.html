@@ -1,1 +1,11 @@
-<p>home works!</p>
+<div class="home">
+    <p> Hi {{username}}</p>
+    <p>How is your mood today?</p>
+    <div class="mood-buttons">
+        <button class="mood-button" *ngFor="let mood of moods" (click) = "selectMood(mood)">
+            {{mood}}
+        </button>
+    </div>
+    <p *ngIf="isMoodSelected">{{selectedMood}}</p>
+    
+</div>
