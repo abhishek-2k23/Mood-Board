@@ -1,1 +1,22 @@
-<p>about works!</p>
+<div class="container">
+    <h2> About This Mood Board 🎨</h2>
+    <p>Welcome to a space where creativity meets clarity.
+        This mood board is thoughtfully curated to bring together colors, textures, images, and inspirations that define the essence of a vision. Whether you're building a brand, designing a project, or simply seeking visual harmony, this board serves as a foundational guide to align emotions, ideas, and aesthetics.</p>
+    <h2>Vision 💡</h2>
+    <p>This mood board is a curated space where ideas turn into visual stories.
+        It captures emotions, tones, and styles that define your creative journey.
+        Each element — from colors to textures — is thoughtfully selected to inspire bold decisions.
+        This board isn't just a collection; it's the foundation of your next big idea.</p>
+    <h2>Features</h2>
+    <div class="chips" >
+        <div class="chip" *ngFor="let feature of features">
+            <fa-icon [icon]="feature.icon"></fa-icon> <p>{{feature.name}}</p>
+        </div>
+    </div>
+    <h2>Connect with developer 🔗 </h2>
+    <div class="socials" >
+        <div class="social" *ngFor="let link of socialLinks" (click) = "redirectToURL(link.link)">
+            <fa-icon [icon]="link.icon"></fa-icon>
+        </div>
+    </div>
+</div>

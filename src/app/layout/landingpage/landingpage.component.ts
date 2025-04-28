@@ -1,7 +1,12 @@
 import { NgClass, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import {
+  faArrowRight,
+  faPalette,
+  faRoad,
+  faTheaterMasks,
+} from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faChartLine } from '@fortawesome/free-solid-svg-icons';
 import { faSeedling } from '@fortawesome/free-solid-svg-icons';
@@ -13,15 +18,15 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [FontAwesomeModule, NgFor, NgClass, RouterLink],
   templateUrl: './landingpage.component.html',
-  styleUrl: './landingpage.component.css'
+  styleUrl: './landingpage.component.css',
 })
 export class LandingpageComponent {
-  faArrowRight = faArrowRight
-  faUser = faUser
-  faRocket = faRocket
-  faBookOpen = faBookOpen
-  faSeeding = faSeedling
-  faChartLine = faChartLine
+  faArrowRight = faArrowRight;
+  faUser = faUser;
+  faRocket = faRocket;
+  faBookOpen = faBookOpen;
+  faSeeding = faSeedling;
+  faChartLine = faChartLine;
 
   features = [
     { name: 'Mood Tracking', icon: this.faChartLine },
@@ -30,7 +35,4 @@ export class LandingpageComponent {
     { name: 'Start Your Journey', icon: this.faRocket },
     { name: 'Know Yourself', icon: this.faUser },
   ];
-
-  
-  
 }

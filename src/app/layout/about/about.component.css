@@ -1,0 +1,41 @@
+.container{
+    width: 1200px;
+    
+.chips, .socials{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 10px;
+    margin: 12px 0 24px 0;
+}
+.chip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    border: 1px solid grey;
+    text-align: center;
+    border-radius: 12px;
+    padding: 0 8px;
+    p{
+        margin: 10px;
+    }
+}
+.social{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid grey;
+    text-align: center;
+    border-radius: 100%;
+}
+.chip:hover, .social:hover{
+    border-color: var(--font-color);
+    transform: scale(1.03);
+    transition: all 0.3s ease;
+}
+
+}
