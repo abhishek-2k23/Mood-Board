@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 :root{
-    --text-color-light: #191919;
-    --text-color-dark: #fffddd;
+    --text-color-light: #524e4e;
+    --text-color-dark: #dae1de;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     min-height: 100vh;
     display:flex;
