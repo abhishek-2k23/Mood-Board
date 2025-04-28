@@ -1,9 +1,9 @@
 .header{
     width: 1200px;
-    border: 2px solid #dedede;
     padding: 0 20px;
+    border-bottom: 2px solid #9e9d9d;
     border-radius: 10px;
-    box-shadow: 1px 1px 2px #9e9d9d;
+    box-shadow: 1px 1px 10px #9e9d9d;
 }
 nav{
     display: flex;
@@ -16,6 +16,21 @@ a{
     margin-left: 20px;
     
 }
-a:hover{
-    color: #313030
+button:hover, a:hover{
+    text-decoration:underline ;
+}
+.authbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+}
+button{
+    background-color: transparent;
+    height: 25px;
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
 }

@@ -7,11 +7,11 @@ import { faChartLine } from '@fortawesome/free-solid-svg-icons';
 import { faSeedling } from '@fortawesome/free-solid-svg-icons';
 import { faRocket } from '@fortawesome/free-solid-svg-icons';
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
-
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-landingpage',
   standalone: true,
-  imports: [FontAwesomeModule, NgFor, NgClass],
+  imports: [FontAwesomeModule, NgFor, NgClass, RouterLink],
   templateUrl: './landingpage.component.html',
   styleUrl: './landingpage.component.css'
 })
