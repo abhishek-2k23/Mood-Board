@@ -13,7 +13,10 @@
         </span>
         <span class="authbutton" *ngIf="userName">
             <p>{{userName}}</p>
-            <a (click)="logout()" class="authbutton">logout</a>
+            <a (click)="logout()" class="authbutton">
+                <p>logout</p>
+                <fa-icon [icon]="faLongArrowAltRight" style="margin-left: -10px;"></fa-icon>
+            </a>
         </span>
     
        </div>
