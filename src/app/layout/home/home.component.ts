@@ -1,7 +1,7 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { LandingpageComponent } from '../landingpage/landingpage.component';
-import { UserService } from '../../service/user/user.service';
+import { UserService } from '../../shared/services/user/user.service';
 import { OnInit } from '@angular/core';
 import { OnChanges } from '@angular/core';
 import { MoodMessageDirective } from '../../shared/directive/mood-message.directive';

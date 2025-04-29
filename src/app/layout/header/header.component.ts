@@ -5,7 +5,7 @@ import { faMoon } from '@fortawesome/free-regular-svg-icons';
 import { faSun } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { OnInit } from '@angular/core';
-import { UserService } from '../../service/user/user.service';
+import { UserService } from '../../shared/services/user/user.service';
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-header',
