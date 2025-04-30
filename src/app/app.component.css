@@ -1,0 +1,15 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  body > * {
+    flex-shrink: 0;
+  }
+  
+  /* Main content area */
+  .main-content {
+    flex: 1;
+  }

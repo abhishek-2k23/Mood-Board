@@ -1,15 +1,109 @@
-<div class="home">
-    <p> Hi {{userName}}</p>
-    <p>How is your mood today?</p>
-    <div class="mood-buttons">
-        <div class="mood-button" *ngFor="let mood of moods" (click) = "selectMood(mood)">
-            <p>{{mood}}</p>
+<div class="home-container">
+    <div class="welcome-section">
+        <h3>Hi {{userName}}! How are you feeling today?</h3>
+
+        <div class="mood-buttons">
+            <button 
+                class="mood-button" 
+                [attr.data-mood]="mood"
+                (click)="selectMood(mood)" 
+                *ngFor="let mood of moods">
+                {{mood}}
+            </button>
+        </div>
+
+        <div class="mood-message-container" *ngIf="isSelectedMood">
+            <h3 class="mood-color" [ngClass]="{
+                'happy-mood-color': selectedMood === 'happy',
+                'sad-mood-color': selectedMood === 'sad',
+                'angry-mood-color': selectedMood === 'angry',
+                'calm-mood-color': selectedMood === 'calm',
+                'excited-mood-color': selectedMood === 'excited'
+            }">
+                Selected Mood: {{selectedMood}}
+            </h3>
+            
+            <div class="user-message" *ngIf="isMoodMessage">
+                Message from {{userName}}: {{moodMessage}}
+            </div>
         </div>
     </div>
-    <p *ngIf="isMoodSelected">Selected mood : {{selectedMood}} {{selectedMood | moodEmoji}}</p>
 
-    <div class="mood-message" *ngIf="isMoodMessage">
-        <p>{{moodMessage}}</p>
+    <div class="mood-tracker-section">
+        <h2>Track Your Mood</h2>
+        
+        <form [formGroup]="moodForm" (ngSubmit)="onSubmit()" class="mood-form">
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input 
+                    type="date" 
+                    id="date" 
+                    formControlName="date"
+                    class="form-control"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="mood">Mood</label>
+                <select 
+                    id="mood" 
+                    formControlName="mood"
+                    class="form-control"
+                >
+                    <option value="">Select your mood</option>
+                    <option *ngFor="let mood of moods" [value]="mood">
+                        {{mood | titlecase}}
+                    </option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="thoughts">Your Thoughts</label>
+                <textarea 
+                    id="thoughts" 
+                    formControlName="thoughts"
+                    class="form-control"
+                    rows="4"
+                    placeholder="Share your thoughts..."
+                ></textarea>
+            </div>
+
+            <button 
+                type="submit" 
+                class="submit-button"
+                [disabled]="!moodForm.valid"
+            >
+                Save Entry
+            </button>
+        </form>
+
+        <div class="mood-entries-table" *ngIf="moodEntries.length > 0">
+            <h3>Your Mood History</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Mood</th>
+                        <th>Thoughts</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let entry of moodEntries">
+                        <td>{{entry.date | date:'mediumDate'}}</td>
+                        <td>
+                            <span class="mood-badge" [style.background-color]="getMoodColor(entry.mood)">
+                                {{entry.mood | titlecase}}
+                            </span>
+                        </td>
+                        <td>{{entry.thoughts}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="chart-container">
+            <h3>Mood Trend</h3>
+            <canvas #moodChartCanvas></canvas>
+        </div>
     </div>
-    
 </div>

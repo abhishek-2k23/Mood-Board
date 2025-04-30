@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 83vh;
     h1{
         font-size: 50px;
     }
